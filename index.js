@@ -33,7 +33,7 @@ app.post('/komik', async (req, res) => {
 app.get('/komik', async (req, res) => {
   try {
     const komiks = await db.Komik.findAll();
-    res.json(komik);
+    res.json(komiks);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: error.message });
